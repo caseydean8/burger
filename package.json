@@ -4,7 +4,8 @@
   "description": "application utilizing node, express, and handlebars",
   "main": "index.js",
   "scripts": {
-    "test": "start"
+    "test": "start",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
