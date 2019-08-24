@@ -15,7 +15,8 @@ router.get('/', (req, res) => {
 
 router.post('/', function(req, res) {
     burger.insertOne(['burger_name', 'devoured'], [req.body.burger_name, req.body.devoured], (result) => {
-        res.json({id: result.insertId})
+        // res.json({id: result.insertId})
+        res.redirect('/')
     })
 })
 
