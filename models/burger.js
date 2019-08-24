@@ -2,7 +2,12 @@
 const orm = require('../config/orm.js')
 
 const burger = {
-    all: function()
+    selectAll: function(a) {
+        orm.selectAll('burgers', function(res) {
+            a(res)
+        })
+    }
 }
 
+// export to controller
 module.exports = burger
