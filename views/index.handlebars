@@ -4,10 +4,28 @@
   {{#each burgers}}
     <li>
       <p>
-        {{this.id}}. {{this.burger_name}}
+        {{this.id}}. {{this.burger_name}} burger. Have I eaten this? {{this.devoured}}
 
         {{!-- <button data-burgerid="{{this.id}}" class="delburg">Delete</button> --}}
       </p>
     </li>
   {{/each}}
 </ul>
+
+<h2>Add a Burger</h2>
+<form class="create-form" action="/" method="POST">
+
+  <div class="form-group">
+    <label for="">Burger Name:</label>
+    <input type="text" name="burger_name">
+  </div>
+
+  <div class="form-group">
+    <label for="slee">Have you eaten it?</label><br>
+    <input type="radio" name="devoured" value="1" checked> yes<br>
+    <input type="radio" name="devoured" value="0"> not yet
+  </div>
+
+  <button type="submit">Add Burger</button>
+</form>
+
