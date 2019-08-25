@@ -41,13 +41,6 @@ router.put("/api/burgers/:id", function(req, res) {
     });
   });
 
-  router.get("*", (req, res) => {
-    let url = path.join(__dirname, 'index.html');
-    if (!url.startsWith('/')) // since we're on local windows
-      url = url.substring(1);
-    res.sendFile(url);
-  });
-
 
 // export to server.js
 module.exports = router
