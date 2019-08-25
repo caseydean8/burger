@@ -15,7 +15,7 @@ var orm = {
       let queryString = `INSERT INTO ${table} (${column}) VALUES (?, ?)`
     
         console.log(queryString);
-connection.query(queryString, values, function(err, result) {
+        connection.query(queryString, values, function(err, result) {
             if (err) throw err;
             console.log(result);
             a(result)
