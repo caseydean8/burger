@@ -14,6 +14,12 @@ const burger = {
         orm.insertOne('burgers', columns, values, function(res) {
             a(res)
         })
+    },
+    updateOne: function(dvrdval, status, a) {
+        console.log("burger model update contact")
+        orm.updateOne('burgers', dvrdval, status, function(res) {
+            a(res)
+        })
     }
 }
 
