@@ -2,6 +2,8 @@ const express = require('express')
 
 const router = express.Router()
 
+const path = require('path')
+
 // import from model
 const burger = require('../models/burger.js')
 
@@ -37,6 +39,13 @@ router.put("/api/burgers/:id", function(req, res) {
         res.status(200).end();
       }
     });
+  });
+
+  router.get("*", (req, res) => {
+    let url = path.join(__dirname, 'index.html');
+    if (!url.startsWith('/')) // since we're on local windows
+      url = url.substring(1);
+    res.sendFile(url);
   });
 
 
