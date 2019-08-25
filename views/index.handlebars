@@ -6,9 +6,9 @@
   {{#each burgers}}
     <li>
       <p>
-        {{this.id}}. {{this.burger_name}} burger. Have I eaten this? {{this.devoured}}
+        {{this.burger_name}}
 
-        {{!-- <button data-burgerid="{{this.id}}" class="delburg">Delete</button> --}}
+        <button id="devoured">eat it!</button>
       </p>
     </li>
   {{/each}}
