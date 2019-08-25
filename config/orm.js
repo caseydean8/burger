@@ -1,5 +1,5 @@
 // import connection.js
-            // can this be ('./connection')?
+
 const connection = require('./connection')
 
 function printQuestionMarks(num) {
@@ -45,13 +45,17 @@ var orm = {
         });
     },
     insertOne: function(table, column, values, a) {
-        let queryString = "INSERT INTO " + table;
-        queryString += " (";
-        queryString += column.toString();
-        queryString += ") ";
-        queryString += "VALUES (";
-        queryString += printQuestionMarks(values.length);
-        queryString += ") ";
+      console.log("orm contacted")
+      let queryString = `INSERT INTO ${table} (${column}) VALUES (?, ?)`
+
+      // let queryString = "INSERT INTO " + table;
+      // queryString += " (";
+      // queryString += column.toString();
+      // queryString += ") ";
+      // queryString += "VALUES (";
+      // queryString += printQuestionMarks(values.length);
+      // queryString += ") ";
+
     
         console.log(queryString);
 
