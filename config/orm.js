@@ -1,3 +1,6 @@
+// import connection.js
+const connection = require('./connection')
+
 // orm is a constructor?
 var orm = {
     selectAll: (table, a) => {
@@ -11,7 +14,8 @@ var orm = {
       console.log("orm contacted")
       let queryString = `INSERT INTO ${table} (${column}) VALUES (?, ?)`
     
-        console.log(queryString);connection.query(queryString, values, function(err, result) {
+        console.log(queryString);
+connection.query(queryString, values, function(err, result) {
             if (err) throw err;
             console.log(result);
             a(result)
