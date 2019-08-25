@@ -2,7 +2,7 @@
   "name": "burger",
   "version": "1.0.0",
   "description": "application utilizing node, express, and handlebars",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "start",
     "start": "node server.js"
