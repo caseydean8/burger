@@ -30,9 +30,17 @@ var orm = {
           if (err) throw err
           a(result)
         })
-      } 
+      },
+      delete: function(table, id, a) {
+        console.log("orm delete contact")
+        let queryString = `DELETE FROM ${table} WHERE (${id})`
+        console.log(queryString)
 
-    
+        connection.query(queryString, function(err, result) {
+          if (err) throw err
+          a(result)
+        })
+      } 
 }
 
 // export to model

@@ -20,6 +20,12 @@ const burger = {
         orm.updateOne('burgers', dvrdval, status, function(res) {
             a(res)
         })
+    },
+    delete: function(status, a) {
+        console.log("burger model delete contact")
+        orm.delete('burgers', status, function(res) {
+            a(res)
+        })
     }
 }
 

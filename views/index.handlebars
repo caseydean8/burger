@@ -26,11 +26,11 @@
       {{#each burgers}}
       {{#if devoured}}
       <li>
-        <p>
+        
           {{this.burger_name}}
 
-          <!-- <button class="devoured" data-id="{{id}}" data-isdevoured="{{devoured}}">delete</button> -->
-        </p>
+          <button class="delete-burger" data-id="{{this.id}}">delete</button>
+        
       </li>
       {{/if}}
       {{/each}}
