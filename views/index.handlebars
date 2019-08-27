@@ -1,18 +1,41 @@
-<h1>Burgers!</h1>
+<div class="row" style="margin-top: 10%">
+  <h1>Burgers!</h1>
+  <img src="/assets/img/burger.jpg" alt="cheeseburger">
+</div>
 
-<img src="/assets/img/burger.jpg" alt="cheeseburger">
+<div class="row">
+  <div class="one-half column">
+    <ul>
+      {{#each burgers}}
+      {{#unless devoured}}
+      <li>
+        
+          {{this.burger_name}}
 
-<ul>
-  {{#each burgers}}
-    <li>
-      <p>
-        {{this.burger_name}}
+          <button class="devoured" data-id="{{id}}" data-isdevoured="{{devoured}}">eat it!</button>
+        
+      </li>
+      {{/unless}}
+      {{/each}}
+    </ul>
+  </div>
+  <div class="one-half column">
+    <ul>
+      {{#each burgers}}
+      {{#if devoured}}
+      <li>
+        <p>
+          {{this.burger_name}}
 
-        <button class="devoured" data-id="{{id}}" data-isdevoured="{{devoured}}">eat it!</button>
-      </p>
-    </li>
-  {{/each}}
-</ul>
+          <button class="devoured" data-id="{{id}}" data-isdevoured="{{devoured}}">delete</button>
+        </p>
+      </li>
+      {{/if}}
+      {{/each}}
+    </ul>
+  </div>
+</div>
+
 
 <h2>Add a Burger</h2>
 <form class="create-form" action="/api/burgers" method="POST">
@@ -24,4 +47,3 @@
 
   <button type="submit">Add Burger</button>
 </form>
-

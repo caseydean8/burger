@@ -5,7 +5,7 @@ $(function() {
       var devoured = $(this).data("isDevoured");
   
       var nowDevoured = {
-        devoured: false
+        devoured: true
       };
   
       // Send the PUT request.
@@ -16,7 +16,7 @@ $(function() {
         function() {
           console.log("changed devoured ");
           // Reload the page to get the updated list
-        //   location.reload();
+          location.reload();
         }
       );
     })            
