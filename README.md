@@ -6,7 +6,7 @@ https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller
 
 and object relational mapping to allow a user to enter a burger and "eat" it with a button click.
 
-User data is stored in a database and the application will eventually have the functionality to delete the burger data.
+User data is stored in a mysql database.
 
 This project is built with 
 * Node.js
